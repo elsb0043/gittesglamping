@@ -1,7 +1,7 @@
 import { useFetchStays } from '../../hooks/useFetchStays'
-import styles from './ophold.module.css'
+import styles from './content.module.css'
 
-function AStayContent({ description, includes, price }) {
+function AStayContent() {
     const { stays } = useFetchStays()
 
     return (

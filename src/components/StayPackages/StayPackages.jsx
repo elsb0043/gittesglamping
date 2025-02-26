@@ -1,11 +1,11 @@
 import styles from './stay.module.css'
-import StayPakke from "./StayPackage"
+import StayPackage from './StayPackage'
 
 function StayPackages() {
 
     return (
         <div className={styles.stayPakkerContainer}>
-            <StayPakke />
+            <StayPackage />
         </div>
     )
 }

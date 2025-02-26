@@ -1,7 +1,7 @@
 import useAuth from '../../hooks/useAuth'
 import styles from './login.module.css'
 
-const Login = () => {
+function Login() {
     const {setEmail, setPassword, error, signIn} = useAuth()
 
     return (

@@ -1,6 +1,6 @@
 import styles from './try.module.css'
 
-function TryStay({title, text}) {
+function TryStay({ title, text }) {
 
     return (
         <div className={styles.prøvOphold}>
