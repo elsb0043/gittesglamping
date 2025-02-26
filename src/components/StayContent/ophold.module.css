@@ -1,0 +1,81 @@
+.aStayContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    background-color: #33626C;
+    border: #33626C 1px solid;
+    border-radius: 3rem 0 0 0;
+
+    .aStayContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .aStayText {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+            h2 {
+                font-size: 4rem;
+                font-weight: 100;
+                color: #fff;
+                text-align: center;
+            }
+    
+            p {
+                font-size: 1rem;
+                font-weight: 100;
+                line-height: 1.4;
+                max-width: 95%;
+                margin-bottom: 1rem;
+                color: #fff;
+                text-align: center;
+                margin-top: 2rem;
+                font-family: 'Nanum Gothic', sans-serif;
+            }
+        }
+
+        .aStayBundle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 3rem;
+            line-height: 1.6;
+
+            p {
+                font-size: 1rem;
+                font-weight: 100;
+                color: #fff;
+                text-align: center;
+                font-family: 'Nanum Gothic', sans-serif;
+            }
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 100;
+                color: #fff;
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    
+        .bookButton {
+            font-size: 3rem;
+            font-weight: 100;
+            color: #fff;
+            background-color: #829B97;
+            padding: 1.5rem 6rem 1.5rem 6rem;
+            border: #829B97 1px solid;
+            border-radius: 3rem 0 3rem 0;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+    }
+}

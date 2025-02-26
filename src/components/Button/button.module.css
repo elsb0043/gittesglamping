@@ -1,0 +1,59 @@
+.greenButton {
+  width: 8rem;
+  background: rgba(0, 128, 0, 0.66);
+  border: 1px solid white;
+  border-radius: 25px 0 25px 0;
+  margin: 1em;
+  padding: 0.5em;
+  cursor: pointer;
+
+  h4 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.redButton {
+  width: 8rem;
+  background: #df4747;
+  border: none;
+  border-radius: 25px 0 25px 0;
+  position: relative;
+  margin: 1em;
+  padding: 1em;
+  cursor: pointer;
+
+  h4 {
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.orangeButton {
+  width: 8rem;
+  background: #c5b496;
+  border: none;
+  border-radius: 25px 0 25px 0;
+  position: relative;
+  margin: 1em;
+  padding: 1em;
+  cursor: pointer;
+
+  h4 {
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

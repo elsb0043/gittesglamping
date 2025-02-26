@@ -1,0 +1,41 @@
+/* Mobile-first */
+.prøvOphold {
+    position: absolute; 
+    margin-top: -3rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #33626C;
+    padding: 2rem;
+    height: 30rem;
+    border: #33626C 1px solid;
+    border-radius: 3rem 0 3rem 0;
+
+    h2 {
+        font-size: 4rem;
+        font-weight: 100;
+        color: #fff;
+        text-align: center;
+    }
+    
+    p {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 1rem;
+        font-weight: 100;
+        line-height: 1.5rem;
+        padding: 1rem 0 1rem 0;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .prøvOphold {
+        p {
+            padding: 1rem 16rem 1rem 16rem;
+        }
+    }
+}

@@ -1,0 +1,172 @@
+/* Mobile-first */
+.aktContainer {
+    height: 100%;
+    background-color: #CED3CD;
+    margin-top: 10rem;
+    padding: 15rem 0 3rem 0;
+
+    .aktContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 8rem;
+        gap: 2rem;
+
+        .aktTitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #C5B496;
+            padding: 1.5rem;
+            width: 95%;
+            border: #C5B496 1px solid;
+            border-radius: 3rem 0 3rem 0;
+            position: relative;
+            z-index: 2; 
+            margin-bottom: -4rem; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
+            h3 {
+                font-size: 4rem;
+                font-weight: 100;
+                color: #fff;
+                text-align: center;
+            }
+        }
+
+        .imgDiv {
+            position: relative;
+            width: 100%;
+            height: 20rem;
+            z-index: 1; 
+            overflow: hidden;
+        
+            img {
+                width: 100%; 
+                height: 100%;
+                object-fit: cover;
+                z-index: 0;
+            }
+        
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(60, 60, 60, 0.613);
+                z-index: 0; 
+            }
+        }
+
+        .aktText {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #33626C;
+            height: 13rem;
+            width: 95%;
+            padding: 1rem 0 1rem 0;
+            border: #33626C 1px solid;
+            border-radius: 3rem 0 3rem 0;
+            position: relative;
+            z-index: 2; 
+            margin-top: -4rem; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            margin-bottom: 3rem;
+
+            .aktTextContent {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                .alleDage {
+                    margin-bottom: 3rem;
+
+                    p {
+                        font-size: 1.8rem;
+                        font-weight: 100;
+                        line-height: 1.5rem;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 1.2;
+                        text-align: left;
+                    }
+
+                    h4 {
+                        font-size: 2rem;
+                        font-weight: 100;
+                        line-height: 1.5rem;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 1.2;
+                        text-align: left;
+                    }
+                }
+
+                .heartDiv {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #ffffff39;
+                    border: transparent 1px solid;
+                    border-radius: 1rem 0 1rem 0;
+                    height: 30%;
+                    width: 15%;
+                    margin: 0 0 3rem 3rem;
+
+                    .heart {
+                        font-size: 1.5rem;
+                        color: #fff;
+                        cursor: pointer;
+                        margin-top: 0.3rem;
+                    }
+                }
+            }
+
+            .læsMereButton {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 1rem;
+                background-color: transparent;
+                height: 4rem;
+                width: 90%;
+                border: #fff 1px solid;
+                border-radius: 3rem 0 3rem 0;
+                cursor: pointer;
+                
+                .linkBtn {
+                    font-size: 2rem;
+                    font-weight: 100;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .aktContainer {
+        height: 100%;
+        padding-bottom: 5rem;
+
+        .aktiviteter {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            
+            .aktivitet {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+    }
+}

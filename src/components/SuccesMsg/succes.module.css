@@ -1,0 +1,42 @@
+
+.succesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #2A4F57;
+
+
+    .succesText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 5rem;
+        line-height: 1.4;
+
+        p {
+            font-size: 2rem;
+            font-weight: 100;
+            color: #ffffffc9;
+            text-align: center;
+        }
+    }
+
+    .tilbageButton {
+        background-color: #829B97;
+        padding: 1.5rem 6rem 1.5rem 6rem;
+        border: #829B97 1px solid;
+        border-radius: 3rem 0 3rem 0;
+        cursor: pointer;
+        margin-top: 1rem;
+
+        .linkBtn {
+            font-size: 3rem;
+            font-weight: 100;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

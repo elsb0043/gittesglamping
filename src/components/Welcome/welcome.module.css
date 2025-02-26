@@ -1,0 +1,99 @@
+/* Mobile-first */
+.komOgPrøv {
+    background-color: #CED3CD;
+    border: transparent 1px solid;
+    border-radius: 3rem 0 0 0;
+
+    .prøvContainer {
+        height: 120vh;
+        background-color: #33626C;
+        border: #33626C 1px solid;
+        border-radius: 3rem 0 3rem 0;
+        margin-top: -3rem;
+    
+        .prøvContent {
+            padding: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+            h2 {
+                font-size: 4rem;
+                font-weight: 100;
+                color: #fff;
+                text-align: center;
+            }
+
+            .prøvPImg {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                p {
+                    font-size: 1rem;
+                    font-weight: 100;
+                    line-height: 1.5rem;
+                    padding: 2rem 0 2rem 0;
+                    color: #fff;
+                    text-align: center;
+                    font-family: 'Nanum Gothic', sans-serif;
+                }
+        
+                img {
+                    height: 10rem;
+                    width: 10rem;
+                    border-radius: 100%;
+                    object-fit: cover;
+                    margin-bottom: 2rem;
+                }
+            }
+    
+            .seOpholdButton {
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: 100;
+                color: #fff;
+                background-color: #829B97;
+                padding: 2rem;
+                border: #829B97 1px solid;
+                border-radius: 3rem 0 3rem 0;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .komOgPrøv {
+        .prøvContainer {  
+            height: 80vh;
+
+            .prøvContent {
+                .prøvPImg {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    gap: 5rem;
+                    margin: 2rem 0 2rem 0;
+    
+                    p {
+                        width: 27rem;
+                    }
+            
+                    img {
+                        height: 16rem;
+                        width: 16rem;
+                        border-radius: 100%;
+                        object-fit: cover;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

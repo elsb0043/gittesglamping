@@ -1,0 +1,9 @@
+@import '@fontsource/zen-loop';
+@import '@fontsource/nanum-gothic';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Loop', sans-serif;
+}
