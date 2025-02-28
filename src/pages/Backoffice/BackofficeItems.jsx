@@ -3,11 +3,14 @@ import Button from "../../components/Button/Button"
 import { useFetchActivities } from "../../hooks/useFetchActivities"
 import { useFetchStays } from "../../hooks/useFetchStays"
 import { useFetchReviews } from "../../hooks/useFetchReviews"
+import ConfirmDialog from "../../components/ConfirmDialog/ConfirmDialog"
+import { useState } from "react"
 
 // ACTIVITIES
 const BackofficeActivities = () => {
-  const { activities, deleteActivity, refetch } = useFetchActivities()
+  const { activities, refetch } = useFetchActivities()
   const navigate = useNavigate()
+  const [showConfirm, setShowConfirm] = useState(false);
 
   const handleAddActivity = () => {
     navigate("/backoffice/activities/add")
@@ -43,10 +46,16 @@ const BackofficeActivities = () => {
               </td>
               <td className='buttons'>
                 <Button
-                  buttonText='Slet'
-                  background='red'
-                  onClick={() => deleteActivity(activity._id)}
+                  buttonText="Slet"
+                  background="red"
+                  onClick={() => setShowConfirm(true)}
                 />
+                {showConfirm && (
+                  <ConfirmDialog
+                    activity={activity}
+                    onClose={() => setShowConfirm(false)}
+                  />
+                )}
                 <Button
                   buttonText='Redigér'
                   onClick={() => handleEdit(activity._id)}
@@ -72,8 +81,9 @@ const BackofficeActivities = () => {
 
 // STAYS
   const BackofficeStays = () => {
-  const { stays, deleteStay, refetch } = useFetchStays()
+  const { stays, refetch } = useFetchStays()
   const navigate = useNavigate()
+  const [showConfirm, setShowConfirm] = useState(false);
 
   const handleAddStay = () => {
     navigate("/backoffice/stays/add")
@@ -108,11 +118,17 @@ const BackofficeActivities = () => {
                 <img src={stay.image}></img>
               </td>
               <td className='buttons'>
-                <Button
-                  buttonText='Slet'
-                  background='red'
-                  onClick={() => deleteStay(stay._id)}
+              <Button
+                  buttonText="Slet"
+                  background="red"
+                  onClick={() => setShowConfirm(true)}
                 />
+                {showConfirm && (
+                  <ConfirmDialog
+                    activity={activity}
+                    onClose={() => setShowConfirm(false)}
+                  />
+                )}
                 <Button
                   buttonText='Redigér'
                   onClick={() => handleEdit(stay._id)}
@@ -138,8 +154,9 @@ const BackofficeActivities = () => {
 
 // REVIEWS
 const BackofficeReviews = () => {
-  const { reviews, deleteReview, refetch } = useFetchReviews()
+  const { reviews, refetch } = useFetchReviews()
   const navigate = useNavigate()
+  const [showConfirm, setShowConfirm] = useState(false);
 
   const handleAddReview = () => {
     navigate("/backoffice/reviews/add")
@@ -170,10 +187,16 @@ const BackofficeReviews = () => {
               <td>{review.stay}</td>
               <td className='buttons'>
                 <Button
-                  buttonText='Slet'
-                  background='red'
-                  onClick={() => deleteReview(review._id)}
+                  buttonText="Slet"
+                  background="red"
+                  onClick={() => setShowConfirm(true)}
                 />
+                {showConfirm && (
+                  <ConfirmDialog
+                    activity={activity}
+                    onClose={() => setShowConfirm(false)}
+                  />
+                )}
                 <Button
                   buttonText='Redigér'
                   onClick={() => handleEdit(review._id)}

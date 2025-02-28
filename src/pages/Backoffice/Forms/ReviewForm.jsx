@@ -25,7 +25,8 @@ const ReviewForm = ({ isEditMode }) => {
                     // Forudfyld formularen med udtalelsen data
                     setName(response.name)
                     setAge(response.age)
-                    setPrice(response.price)
+                    setReview(response.review)
+                    setStay(response.stay)
                   }
                 } catch (error) {
                   console.error("Error fetching review:", error)
@@ -42,6 +43,7 @@ const ReviewForm = ({ isEditMode }) => {
 
         const reviewData = new FormData()
         reviewData.append("name", name)
+        reviewData.append("age", age)
         reviewData.append("review", review)
         reviewData.append("stay", stay)
 

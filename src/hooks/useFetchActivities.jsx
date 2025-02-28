@@ -79,12 +79,6 @@ const useFetchActivities = () => {
 
     // SLET AKTIVITET
     const deleteActivity = async (params) => {
-        // Bekræftelse før sletning
-        const isConfirmed = window.confirm("Er du sikker på du vil slette denne aktivitet?")
-        if (!isConfirmed) {
-            return // Stop funktionen, hvis brugeren annullerer
-        }
-
         try {
             await fetch(`http://localhost:3042/activity/${params}`, {
                 method: "DELETE",
