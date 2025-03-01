@@ -125,7 +125,7 @@ const BackofficeActivities = () => {
                 />
                 {showConfirm && (
                   <ConfirmDialog
-                    activity={activity}
+                    stay={stay}
                     onClose={() => setShowConfirm(false)}
                   />
                 )}
@@ -193,7 +193,7 @@ const BackofficeReviews = () => {
                 />
                 {showConfirm && (
                   <ConfirmDialog
-                    activity={activity}
+                    review={review}
                     onClose={() => setShowConfirm(false)}
                   />
                 )}
