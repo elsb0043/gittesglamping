@@ -79,6 +79,7 @@ const useFetchActivities = () => {
 
     // SLET AKTIVITET
     const deleteActivity = async (params) => {
+        
         try {
             await fetch(`http://localhost:3042/activity/${params}`, {
                 method: "DELETE",

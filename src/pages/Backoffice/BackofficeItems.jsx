@@ -1,16 +1,15 @@
 import { Outlet, useNavigate } from "react-router-dom"
-import Button from "../../components/Button/Button"
 import { useFetchActivities } from "../../hooks/useFetchActivities"
 import { useFetchStays } from "../../hooks/useFetchStays"
 import { useFetchReviews } from "../../hooks/useFetchReviews"
-import ConfirmDialog from "../../components/ConfirmDialog/ConfirmDialog"
-import { useState } from "react"
+import { useAlert } from "../../context/alertContext"
+import Button from "../../components/Button/Button"
 
 // ACTIVITIES
 const BackofficeActivities = () => {
-  const { activities, refetch } = useFetchActivities()
+  const { activities, deleteActivity, refetch } = useFetchActivities()
   const navigate = useNavigate()
-  const [showConfirm, setShowConfirm] = useState(false);
+  const { showError, showConfirmation } = useAlert()
 
   const handleAddActivity = () => {
     navigate("/backoffice/activities/add")
@@ -18,6 +17,15 @@ const BackofficeActivities = () => {
 
   const handleEdit = (activityId) => {
     navigate(`/backoffice/activities/edit/${activityId}`)
+  }
+
+  const handleConfirmation = (activityId) => {
+    showConfirmation(
+      "Du er ved at slette denne aktivitet",
+      "Er du sikker?",
+      () => deleteActivity(activityId),
+      () => showError("Sletning annulleret.")
+    )
   }
 
   console.log(activities)
@@ -48,14 +56,8 @@ const BackofficeActivities = () => {
                 <Button
                   buttonText="Slet"
                   background="red"
-                  onClick={() => setShowConfirm(true)}
+                  onClick={() => handleConfirmation(true)}
                 />
-                {showConfirm && (
-                  <ConfirmDialog
-                    activity={activity}
-                    onClose={() => setShowConfirm(false)}
-                  />
-                )}
                 <Button
                   buttonText='Redigér'
                   onClick={() => handleEdit(activity._id)}
@@ -81,9 +83,9 @@ const BackofficeActivities = () => {
 
 // STAYS
   const BackofficeStays = () => {
-  const { stays, refetch } = useFetchStays()
+  const { stays, deleteStay, refetch } = useFetchStays()
   const navigate = useNavigate()
-  const [showConfirm, setShowConfirm] = useState(false);
+  const { showError, showConfirmation } = useAlert()
 
   const handleAddStay = () => {
     navigate("/backoffice/stays/add")
@@ -91,6 +93,15 @@ const BackofficeActivities = () => {
 
   const handleEdit = (stayId) => {
     navigate(`/backoffice/stays/edit/${stayId}`)
+  }
+
+  const handleConfirmation = (stayId) => {
+    showConfirmation(
+      "Du er ved at slette denne aktivitet",
+      "Er du sikker?",
+      () => deleteStay(stayId),
+      () => showError("Sletning annulleret.")
+    )
   }
 
   console.log(stays)
@@ -121,14 +132,8 @@ const BackofficeActivities = () => {
               <Button
                   buttonText="Slet"
                   background="red"
-                  onClick={() => setShowConfirm(true)}
+                  onClick={() => handleConfirmation(true)}
                 />
-                {showConfirm && (
-                  <ConfirmDialog
-                    stay={stay}
-                    onClose={() => setShowConfirm(false)}
-                  />
-                )}
                 <Button
                   buttonText='Redigér'
                   onClick={() => handleEdit(stay._id)}
@@ -154,9 +159,9 @@ const BackofficeActivities = () => {
 
 // REVIEWS
 const BackofficeReviews = () => {
-  const { reviews, refetch } = useFetchReviews()
+  const { reviews, deleteReview, refetch } = useFetchReviews()
   const navigate = useNavigate()
-  const [showConfirm, setShowConfirm] = useState(false);
+  const { showError, showConfirmation } = useAlert()
 
   const handleAddReview = () => {
     navigate("/backoffice/reviews/add")
@@ -164,6 +169,15 @@ const BackofficeReviews = () => {
 
   const handleEdit = (reviewId) => {
     navigate(`/backoffice/reviews/edit/${reviewId}`)
+  }
+
+  const handleConfirmation = (reviewId) => {
+    showConfirmation(
+      "Du er ved at slette denne aktivitet",
+      "Er du sikker?",
+      () => deleteReview(reviewId),
+      () => showError("Sletning annulleret.")
+    )
   }
 
   return (
@@ -189,14 +203,8 @@ const BackofficeReviews = () => {
                 <Button
                   buttonText="Slet"
                   background="red"
-                  onClick={() => setShowConfirm(true)}
+                  onClick={() => handleConfirmation(true)}
                 />
-                {showConfirm && (
-                  <ConfirmDialog
-                    review={review}
-                    onClose={() => setShowConfirm(false)}
-                  />
-                )}
                 <Button
                   buttonText='Redigér'
                   onClick={() => handleEdit(review._id)}

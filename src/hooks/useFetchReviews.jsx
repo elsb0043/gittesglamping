@@ -75,11 +75,6 @@ const useFetchReviews = () => {
 
     // SLET REVIEW
     const deleteReview = async (params) => {
-        const isConfirmed = window.confirm("Er du sikker på du vil slette denne udtalelse?")
-
-        if (!isConfirmed) {
-            return // Stop funktionen, hvis brugeren annullerer
-        }
 
         try {
             await fetch (`http://localhost:3042/review/${params}`, {

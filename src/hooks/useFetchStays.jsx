@@ -75,11 +75,6 @@ const useFetchStays = () => {
 
     // SLET STAY
     const deleteStay = async (params) => {
-        const isConfirmed = window.confirm("Er du sikker på du vil slette dette ophold?")
-
-        if (!isConfirmed) {
-            return // Stop funktionen, hvis brugeren annullerer
-        }
 
         try {
             await fetch (`http://localhost:3042/stay/${params}`, {
