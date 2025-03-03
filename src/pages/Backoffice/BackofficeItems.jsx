@@ -56,7 +56,7 @@ const BackofficeActivities = () => {
                 <Button
                   buttonText="Slet"
                   background="red"
-                  onClick={() => handleConfirmation(true)}
+                  onClick={() => handleConfirmation(activity._id)}
                 />
                 <Button
                   buttonText='Redigér'
@@ -132,7 +132,7 @@ const BackofficeActivities = () => {
               <Button
                   buttonText="Slet"
                   background="red"
-                  onClick={() => handleConfirmation(true)}
+                  onClick={() => handleConfirmation(stay._id)}
                 />
                 <Button
                   buttonText='Redigér'
@@ -203,7 +203,7 @@ const BackofficeReviews = () => {
                 <Button
                   buttonText="Slet"
                   background="red"
-                  onClick={() => handleConfirmation(true)}
+                  onClick={() => handleConfirmation(review._id)}
                 />
                 <Button
                   buttonText='Redigér'
